@@ -17,32 +17,6 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Links</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <Link href="/" className="hover:text-accent transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="hover:text-accent transition-colors">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-accent transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-accent transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h4 className="font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
