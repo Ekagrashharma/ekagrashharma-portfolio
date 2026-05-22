@@ -39,28 +39,6 @@ export default function Skills() {
   const titleRef = useRef(null)
   const cardsRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(titleRef.current, {
-        duration: 0.8,
-        opacity: 0,
-        y: 30,
-      })
-
-      gsap.from(cardsRef.current?.children || [], {
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: "top 80%",
-        },
-        duration: 0.6,
-        opacity: 0,
-        y: 20,
-        stagger: 0.08,
-      })
-    })
-
-    return () => ctx.revert()
-  }, [])
 
   return (
     <main>
@@ -78,7 +56,7 @@ export default function Skills() {
             </p>
           </div>
 
-          <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <div ref={cardsRef} className="grid grid-cols-1 border border-l-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {SKILLS_CATEGORIES.map((item) => (
               <div
                 key={item.category}

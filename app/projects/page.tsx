@@ -68,29 +68,6 @@ export default function Projects() {
   const titleRef = useRef(null)
   const cardsRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(titleRef.current, {
-        duration: 0.8,
-        opacity: 0,
-        y: 30,
-      })
-
-      gsap.from(cardsRef.current?.children || [], {
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: "top 80%",
-        },
-        duration: 0.6,
-        opacity: 0,
-        y: 20,
-        stagger: 0.1,
-      })
-    })
-
-    return () => ctx.revert()
-  }, [])
-
   return (
     <main>
       <Navbar />
@@ -107,7 +84,7 @@ export default function Projects() {
             </p>
           </div>
 
-          <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          <div ref={cardsRef} className="grid grid-cols-1 border border-l-4 border-black rounded-lg md:grid-cols-2 gap-8 mt-12 ">
             {PROJECTS.map((project) => (
               <a
                 key={project.title}
