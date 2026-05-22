@@ -154,33 +154,6 @@ function ProjectsSection() {
   const titleRef = useRef(null)
   const cardsRef = useRef(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(titleRef.current, {
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 80%",
-        },
-        duration: 0.8,
-        opacity: 0,
-        y: 40,
-      })
-
-      {/*
-        gsap.from(".project-card", {
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: "top 80%",
-        },
-        duration: 0.6,
-        opacity: 0,
-        y: 40,
-        stagger: 0.1,
-      })
-       */}
-    })
-    return () => ctx.revert()
-  }, [])
 
 const projectsLinks = [
     {  label: "Coaching web pay app", href: "https://github.com/Ekagrashharma/coaching-pay-web-app" },
@@ -200,7 +173,7 @@ const projectsLinks = [
           </p>
         </div>
 
-        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"> 
+        <div ref={cardsRef} className="grid grid-cols-1 border border-l-4 border-black rounded-lg md:grid-cols-2 gap-8 mt-12"> 
           {PROJECTS.map((project) => {
             const IconComponent = project.icon
             return (
