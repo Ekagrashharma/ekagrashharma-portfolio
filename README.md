@@ -7,7 +7,7 @@ Built with scalability, clean architecture, and industry best practices in mind.
 ---
 
 ## 🌟 Live Preview
-🔗 https://ekagrashharma-portfolio.vercel.app
+🔗 https://ekagrashharma.me
 
 
 ---
