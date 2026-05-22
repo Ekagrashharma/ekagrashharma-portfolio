@@ -232,32 +232,7 @@ function SkillsSection() {
   const titleRef = useRef(null)
   const cardsRef = useRef(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(titleRef.current, {
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 80%",
-        },
-        duration: 0.8,
-        opacity: 0,
-        y: 40,
-      })
-
-      {/*gsap.from(".skill-card", {
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: "top 80%",
-        },
-        duration: 0.6,
-        opacity: 0,
-        y: 40,
-        stagger: 0.05,
-      })*/}
-    })
-
-    return () => ctx.revert()
-  }, [])
+ 
 
   return (
     <section className="min-h-full  pb-20 px-6 noise-bg" id="skills">
@@ -273,13 +248,13 @@ function SkillsSection() {
         </div>
 
           Main Skills Categories 
-        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div ref={cardsRef} className="grid grid-cols-1   md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {SKILLS_CATEGORIES.map((item) => {
             const IconComponent = item.icon
             return (
               <div
                 key={item.category}
-                className="skill-card glass-effect p-8 rounded-xl hover:border-accent/50 transition-all duration-300 hover:translate-y-1 h-full"
+                className="skill-card border border-l-2  rounded-lg p-8 hover:border-accent/50 transition-all duration-300 hover:translate-y-1 h-full"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-2 rounded-lg bg-accent/10">
