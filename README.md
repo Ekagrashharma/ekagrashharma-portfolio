@@ -3,6 +3,7 @@
 A modern, responsive, and performance-optimized personal portfolio showcasing my skills, projects, and experience in Web Development, UI/UX Design, and AI-powered solutions.
 
 Built with scalability, clean architecture, and industry best practices in mind.
+Building AI agents 
 
 ---
 
